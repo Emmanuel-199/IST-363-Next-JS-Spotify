@@ -1,4 +1,5 @@
 import Col from '../../components/Col'
+import Container from '../../components/Container'
 import Heading from '../../components/Heading'
 import Image from 'next/image'
 import Layout from '../../components/Layout'
@@ -21,6 +22,7 @@ export async function getStaticProps() {
 const ArtistsLandingPage = ({ artists }) => {
     console.log({ artists });
     return <Layout>
+        <Container>
         <Heading level="1">Artists</Heading>
         <Row>
         {artists.map((artist, index) => {
@@ -46,6 +48,7 @@ const ArtistsLandingPage = ({ artists }) => {
 
         })}
         </Row>
+        </Container>
     </Layout>
 }
 export default ArtistsLandingPage;
